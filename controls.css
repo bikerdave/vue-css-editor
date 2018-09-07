@@ -1,0 +1,50 @@
+:root {
+    --controlsWidth: 250px;
+}
+
+body {
+    position: relative;
+}
+
+.page {
+    width: calc(100vw - var(--controlsWidth));
+}
+
+.controls {
+    background: #eee;
+    border-left: 1px solid;
+    bottom: 0;
+    color: #333!important;
+    line-height: 1.42857143;
+    overflow-y: scroll;
+    padding: 30px;
+    position: fixed!important;
+    right: 0;
+    top: 0;
+    width: var(--controlsWidth);
+}
+
+.controls__group {
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.controls__heading, .controls__subheading {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.controls__heading {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.controls__subheading {
+    font-size: 16px;
+}
+
+.controls, .input-group-addon, input, select {
+    font-size: 12px!important;
+}

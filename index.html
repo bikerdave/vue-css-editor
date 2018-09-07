@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="controls.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body id="app">
+
+  <div class="page">
+    <div class="container">
+      <h1>Hello</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus eligendi, eum fugiat id laboriosam nihil porro! Autem culpa eum facilis molestiae molestias obcaecati rem sapiente suscipit vitae voluptatum? Molestias.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+
+    <p><a href="#acc-general" data-toggle="collapse" class="controls__heading">General</a></p>
+    <div id="acc-general" class="collapse">
+      <div class="controls__group">
+        <div class="form-group">
+          <label>Base font size</label>
+          <div class="input-group">
+            <input type="number" v-model="baseFontSize" class="form-control">
+            <div class="input-group-addon">px</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Line height</label>
+          <input type="number" v-model="baseLineheight" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Color</label>
+          <input type="color" v-model="baseColor" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <p><a href="#acc-h1" data-toggle="collapse" class="controls__heading">H1</a></p>
+    <div id="acc-h1" class="collapse">
+      <div class="controls__group">
+        <div class="form-group">
+          <label>Font size</label>
+          <div class="input-group">
+            <input type="number" v-model="h1Size" class="form-control">
+            <div class="input-group-addon">rem</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Line height</label>
+          <input type="number" v-model="h1Lineheight" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Color</label>
+          <input type="color" v-model="h1Color" class="form-control">
+        </div>
+      </div>
+      <div class="controls__group">
+        <div class="form-group">
+          <label>Margin top</label>
+          <div class="input-group">
+            <input type="number" v-model="h1MarginTop" class="form-control">
+            <div class="input-group-addon">rem</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Margin bottom</label>
+          <div class="input-group">
+            <input type="number" v-model="h1MarginBottom" class="form-control">
+            <div class="input-group-addon">rem</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls__group">
+        <div class="form-group">
+          <label>Border top size</label>
+          <div class="input-group">
+            <input type="number" v-model="h1BorderTopSize" class="form-control">
+            <div class="input-group-addon">px</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Border top colour</label>
+          <input type="color" v-model="h1BorderTopColor" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Border bottom size</label>
+          <div class="input-group">
+            <input type="number" v-model="h1BorderBottomSize" class="form-control">
+            <div class="input-group-addon">px</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Border bottom colour</label>
+          <input type="color" v-model="h1BorderBottomColor" class="form-control">
+        </div>
+      </div>
+      <div class="controls__group">
+        <div class="form-group">
+          <label>Padding top</label>
+          <div class="input-group">
+            <input type="number" v-model="h1PaddingTop" class="form-control">
+            <div class="input-group-addon">rem</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Padding bottom</label>
+          <div class="input-group">
+            <input type="number" v-model="h1PaddingBottom" class="form-control">
+            <div class="input-group-addon">rem</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    :root {
+      --baseFontSize: {{ baseFontSize + 'px' }};
+      --baseLineheight: {{ baseLineheight }};
+      --baseColor: {{ baseColor }};
+
+      --h1Size: {{ h1Size + 'rem' }};
+      --h1Color: {{ h1Color }};
+      --h1Lineheight: {{ h1Lineheight }};
+      --h1MarginBottom: {{ h1MarginBottom + 'rem' }};
+      --h1MarginTop: {{ h1MarginTop + 'rem' }};
+      --h1BorderTop: {{ h1BorderTopSize + 'px' }} solid {{ h1BorderTopColor }};
+      --h1PaddingBottom: {{ h1PaddingBottom + 'rem' }};
+      --h1PaddingTop: {{ h1PaddingTop + 'rem' }};
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/vue@1.0.28/dist/vue.min.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+</html>

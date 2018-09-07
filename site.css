@@ -1,0 +1,21 @@
+html {
+  font-size: var(--baseFontSize);
+}
+
+body {
+  color: var(--baseColor);
+  font-size: 1rem;
+  line-height: var(--baseLineheight);
+}
+
+h1 {
+  border-bottom: var(--h1BorderBottom);
+  border-top: var(--h1BorderTop);
+  color: var(--h1Color);
+  font-size: var(--h1Size);
+  line-height: var(--h1Lineheight);
+  margin-bottom: var(--h1MarginBottom);
+  margin-top: var(--h1MarginTop);
+  padding-bottom: var(--h1PaddingBottom);
+  padding-top: var(--h1PaddingTop);
+}
